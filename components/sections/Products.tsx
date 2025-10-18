@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ProductCard from "../ui/ProductCard";
-import {
-  ArrowUpNarrowWide,
-  BrainCog,
-  Cable,
-  ChartLine,
-  Tag,
-  Workflow,
-} from "lucide-react";
+import { ArrowUpNarrowWide, Cable, ChartLine, Workflow } from "lucide-react";
 
 const companies = [
   { name: "Coinbase", logo: "/logos/coinbase.png" },

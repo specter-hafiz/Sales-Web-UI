@@ -1,4 +1,4 @@
-import { Check, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import React from "react";
 import PricingCard from "../ui/PricingCard";
 

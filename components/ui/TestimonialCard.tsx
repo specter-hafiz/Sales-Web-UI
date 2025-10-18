@@ -23,7 +23,7 @@ const TestimonialCard = ({
       {/* Quote */}
       <div className="mb-6">
         <h3 className="text-lg sm:text-xl font-semibold mb-4 text-gray-900">
-          "{quote}"
+          &quot;{quote}&quot;
         </h3>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
           {text}

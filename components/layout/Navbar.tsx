@@ -28,12 +28,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close mobile menu on route change
-  const handleLinkClick = () => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  };
-
   return (
     <nav className="fixed top-0 right-0 left-0 padding bg-white shadow-md z-50">
       <div className="flex items-center justify-between py-3">

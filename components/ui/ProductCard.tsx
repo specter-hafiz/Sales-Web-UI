@@ -1,4 +1,4 @@
-import { ArrowRight, LucideIcon, Tag } from "lucide-react";
+import { ArrowRight, LucideIcon } from "lucide-react";
 import React from "react";
 
 interface ProductCardProps {

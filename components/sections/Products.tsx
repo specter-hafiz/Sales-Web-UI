@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import ProductCard from "../ui/ProductCard";
+import {
+  ArrowUpNarrowWide,
+  BrainCog,
+  Cable,
+  ChartLine,
+  Tag,
+  Workflow,
+} from "lucide-react";
 
 const companies = [
   { name: "Coinbase", logo: "/logos/coinbase.png" },
@@ -18,7 +26,8 @@ const products = [
     title: "Accelerate sales",
     highlight: "with engagement",
     description: "built directly into your CRM.",
-    gradient: "from-blue-50 to-blue-100",
+    gradient: "from-light-blue-50 to-blue-100",
+    icon: ArrowUpNarrowWide,
   },
   {
     id: 2,
@@ -26,7 +35,8 @@ const products = [
     title: "Data-driven",
     highlight: "insights",
     description: "to boost your revenue.",
-    gradient: "from-purple-50 to-purple-100",
+    gradient: "from-light-blue-50 to-blue-100",
+    icon: ChartLine,
   },
   {
     id: 3,
@@ -34,7 +44,8 @@ const products = [
     title: "Automate workflows",
     highlight: "effortlessly",
     description: "and save time.",
-    gradient: "from-green-50 to-green-100",
+    gradient: "from-light-blue-50 to-blue-100",
+    icon: Workflow,
   },
   {
     id: 4,
@@ -42,13 +53,14 @@ const products = [
     title: "Connect your tools",
     highlight: "seamlessly",
     description: "in one platform.",
-    gradient: "from-orange-50 to-orange-100",
+    gradient: "from-light-blue-50 to-blue-100",
+    icon: Cable,
   },
 ];
 
 const Products = () => {
   return (
-    <section className="min-h-screen padding py-16">
+    <section className="min-h-screen padding py-16" id="products">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center rounded-2xl bg-gradient-to-br from-white via-white to-blue-100 py-12 px-4 sm:px-6 lg:px-8">
           {/* Trust Badge */}
@@ -98,6 +110,7 @@ const Products = () => {
               <ProductCard
                 key={product.id}
                 category={product.category}
+                icon={product.icon}
                 title={product.title}
                 highlight={product.highlight}
                 description={product.description}

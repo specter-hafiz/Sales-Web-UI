@@ -38,3 +38,15 @@ body {
   padding: 0;
   @apply text-black;
 }
+
+.small-p {
+  @apply text-base sm:text-lg text-gray-600 max-w-md leading-relaxed;
+}
+
+.text-m {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight;
+}
+
+.tag {
+  @apply px-4 py-1 w-fit rounded-full text-xs sm:text-sm font-light shadow-sm mb-6 border border-gray-200 bg-white;
+}

@@ -1,29 +1,51 @@
 import React from "react";
 import Image from "next/image";
-const TestimonialCard = () => {
+
+interface TestimonialCardProps {
+  quote: string;
+  text: string;
+  name: string;
+  role: string;
+  company: string;
+  image: string;
+}
+
+const TestimonialCard = ({
+  quote,
+  text,
+  name,
+  role,
+  company,
+  image,
+}: TestimonialCardProps) => {
   return (
-    <div className="flex flex-col items-start p-6 border border-light-gray h-full rounded-2xl">
-      <h1 className="text-base sm:text-lg font-medium mb-4">
-        "Highly Reliable"
-      </h1>
-      <p className="text-base sm:text-sm text-dark-gray max-w-3xs mb-12 leading-relaxed">
-        Professional, responsive, and always on time. The collaboration made our
-        project launch effortless and successful.
-      </p>
-      <div className="flex items-center gap-4">
-        <div className="h-[40px] w-[40px] bg-gray-100 rounded-full overflow-hidden shadow-lg">
+    <div className="flex flex-col justify-between p-6 sm:p-8 border border-light-gray hover:border-light-gray-200 h-full rounded-2xl shadow-sm hover:shadow-md transition-all bg-white group">
+      {/* Quote */}
+      <div className="mb-6">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4 text-gray-900">
+          "{quote}"
+        </h3>
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+          {text}
+        </p>
+      </div>
+
+      {/* Author Info */}
+      <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
+        <div className="relative h-12 w-12 rounded-full overflow-hidden shadow-md flex-shrink-0 group-hover:scale-110 transition-transform">
           <Image
-            src="/images/profile1.png"
-            alt="Customer Testimonial"
-            width={40}
-            height={40}
-            className="object-cover w-full h-full"
+            src={image}
+            alt={`${name} profile photo`}
+            fill
+            className="object-cover"
           />
         </div>
         <div>
-          <h2 className="text-base sm:text-lg text-bold">Sophia Martinez</h2>
-          <p className="text-base sm:text-sm text-dark-gray">
-            Marketing Director @BrightEdge
+          <h4 className="text-base sm:text-lg font-bold text-gray-900">
+            {name}
+          </h4>
+          <p className="text-sm text-gray-500">
+            {role} @ {company}
           </p>
         </div>
       </div>

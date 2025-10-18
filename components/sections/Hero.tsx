@@ -54,7 +54,7 @@ const Hero = () => {
                 alt="AI-powered analytics dashboard"
                 width={200}
                 height={280}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-contain rounded-xl w-full h-full"
               />
             </div>
           </div>
@@ -66,7 +66,7 @@ const Hero = () => {
                 alt="Sales pipeline visualization"
                 width={200}
                 height={200}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-contain rounded-xl w-full h-full"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ const Hero = () => {
                 alt="Team collaboration features"
                 width={280}
                 height={200}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-contain rounded-xl w-full h-full"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ const Hero = () => {
                 alt="Performance metrics"
                 width={200}
                 height={200}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-contain rounded-xl w-full h-full"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ const Hero = () => {
                 alt="AI automation workflow"
                 width={200}
                 height={260}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-contain rounded-xl w-full h-full"
               />
             </div>
           </div>

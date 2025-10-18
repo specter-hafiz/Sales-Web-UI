@@ -16,11 +16,11 @@ const HighlightCard = ({
 }: HighlightCardProps) => {
   return (
     <div
-      className={`flex flex-col justify-between p-6 sm:p-8 bg-gradient-to-br ${gradient} rounded-xl shadow-md hover:shadow-xl transition-all hover:scale-105 group h-full`}
+      className={`flex flex-col justify-between p-6 sm:p-8 bg-gradient-to-br ${gradient} rounded-xl shadow-sm hover:shadow-md transition-all hover:scale-105 group h-full`}
     >
       {/* Icon */}
       <div className="mb-12">
-        <div className="w-16 h-16 flex items-center justify-center border-1 border-light-gray rounded-full shadow-sm bg-transparent group-hover:border-gray-300 transition-colors">
+        <div className="w-16 h-16 flex items-center justify-center border-1 border-light-gray rounded-full shadow-sm backdrop-blur-md bg-transparent group-hover:border-gray-300 transition-colors">
           <Icon size={32} className="text-gray-700" />
         </div>
       </div>
@@ -34,7 +34,7 @@ const HighlightCard = ({
       </div>
 
       {/* CTA Button */}
-      <button className="flex items-center gap-2 bg-white hover:bg-gray-50 rounded-lg border-2 border-white hover:border-gray-200 py-2 px-4 text-sm font-medium shadow-sm transition-all group-hover:gap-3 w-fit">
+      <button className="flex items-center gap-2 bg-white hover:bg-gray-50 rounded-lg border-1 border-white hover:border-gray-200 py-2 px-4 text-sm font-medium shadow-sm transition-all group-hover:gap-3 w-fit">
         See More
         <ArrowRight
           size={16}

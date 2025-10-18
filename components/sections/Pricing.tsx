@@ -50,17 +50,15 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section className="padding min-h-screen py-16 sm:py-20">
+    <section className="padding min-h-screen py-16 sm:py-20" id="pricing">
       <div className="max-w-7xl mx-auto flex flex-col gap-6 items-center text-center">
         {/* Badge */}
-        <div className="px-4 py-1 w-fit rounded-full text-xs sm:text-sm font-light shadow-sm mb-4 border border-gray-200 bg-white">
+        <div className="px-4 py-1 w-fit rounded-full text-xs sm:text-sm font-light shadow-sm mb-1 border border-gray-200 bg-white">
           PRICING
         </div>
 
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium max-w-4xl">
-          Choose the Right Plan for Your Team
-        </h1>
+        <h1 className="text-m">Choose the Right Plan for Your Team</h1>
 
         {/* Description */}
         <p className="text-base sm:text-lg text-gray-600 max-w-2xl">

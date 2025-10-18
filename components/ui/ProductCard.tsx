@@ -1,4 +1,4 @@
-import { ArrowRight, Tag } from "lucide-react";
+import { ArrowRight, LucideIcon, Tag } from "lucide-react";
 import React from "react";
 
 interface ProductCardProps {
@@ -7,6 +7,7 @@ interface ProductCardProps {
   highlight: string;
   description: string;
   gradient?: string;
+  icon: LucideIcon;
 }
 
 const ProductCard = ({
@@ -15,14 +16,15 @@ const ProductCard = ({
   highlight,
   description,
   gradient = "from-blue-50 to-blue-100",
+  icon: Icon,
 }: ProductCardProps) => {
   return (
     <div
-      className={`bg-gradient-to-br ${gradient} p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:scale-105 group`}
+      className={`bg-gradient-to-br ${gradient} p-6 rounded-xl shadow-md hover:shadow-md transition-all hover:scale-105 group flex flex-col justify-between h-full`}
     >
       {/* Icon */}
       <div className="bg-white shadow-sm rounded-full w-fit p-2 mb-12">
-        <Tag size={24} className="text-gray-700" />
+        <Icon size={24} className="text-gray-700" />
       </div>
 
       {/* Category */}
@@ -36,7 +38,7 @@ const ProductCard = ({
       </h2>
 
       {/* CTA Button */}
-      <button className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg hover:bg-gray-50 transition-colors shadow-sm font-medium text-sm group-hover:gap-3 group-hover:transition-all">
+      <button className="flex items-center w-fit gap-2 px-4 py-2 bg-white rounded-lg hover:bg-gray-50 transition-colors shadow-sm font-medium text-sm group-hover:gap-3 group-hover:transition-all">
         See More
         <ArrowRight
           size={16}

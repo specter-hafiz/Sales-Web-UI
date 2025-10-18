@@ -15,21 +15,21 @@ const features = [
     icon: TrendingUp,
     title: "AI Analytics",
     description: "Data-driven insights to boost your sales performance.",
-    gradient: "from-purple-50 to-purple-100",
+    gradient: "from-blue-50 to-blue-100",
   },
   {
     id: 3,
     icon: Shield,
     title: "Secure Platform",
     description: "Enterprise-grade security for your customer data.",
-    gradient: "from-green-50 to-green-100",
+    gradient: "from-blue-50 to-blue-100",
   },
   {
     id: 4,
     icon: Zap,
     title: "Automation",
     description: "Automate workflows and save valuable time.",
-    gradient: "from-orange-50 to-orange-100",
+    gradient: "from-blue-50 to-blue-100",
   },
 ];
 
@@ -38,9 +38,7 @@ const Highlights = () => {
     <section className="min-h-screen padding py-16 sm:py-20">
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
-        <div className="px-4 py-1 w-fit rounded-full text-xs sm:text-sm font-light shadow-sm mb-6 border border-gray-200 bg-white">
-          FEATURE OVERVIEW
-        </div>
+        <div className="tag">FEATURE OVERVIEW</div>
 
         {/* Header */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 mb-12">

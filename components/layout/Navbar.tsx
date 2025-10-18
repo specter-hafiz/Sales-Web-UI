@@ -16,6 +16,7 @@ export default function Navbar() {
     <nav className="fixed top-0 right-0 left-0 padding bg-white shadow-md z-50">
       <div className="flex items-center justify-between py-3">
         {/* Logo */}
+
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
           <div className="relative h-8 w-12">
             <Image
@@ -142,7 +143,7 @@ export default function Navbar() {
           {/* Log In - Hidden on mobile */}
           <Link
             href="/login"
-            className="hidden md:block font-light py-2 px-4 border border-black rounded-full hover:bg-gray-50 transition-colors"
+            className="hidden md:block font-medium py-2 px-4 border border-black rounded-full hover:bg-light-green hover:border-light-green transition-colors"
           >
             Log In
           </Link>
@@ -212,16 +213,16 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Actions */}
-          <div className="pt-4 space-y-3 border-t border-gray-200">
+          <div className="pt-4 space-y-3 border-t border-light-gray">
             <Link
-              href="/login"
+              href="/"
               className="block text-center py-2 px-4 border border-black rounded-full"
               onClick={() => setMobileMenuOpen(false)}
             >
               Log In
             </Link>
             <Link
-              href="/signup"
+              href="/"
               className="block text-center text-white bg-black py-2 px-4 rounded-full"
               onClick={() => setMobileMenuOpen(false)}
             >

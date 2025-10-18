@@ -10,7 +10,7 @@ const features = [
 
 const ChooseUs = () => {
   return (
-    <section className="min-h-screen padding py-16 sm:py-20">
+    <section className="min-h-screen padding py-16 sm:py-20" id="company">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12 sm:mb-16">
@@ -22,7 +22,7 @@ const ChooseUs = () => {
               Boost Revenue with Smarter Sales CRM
             </h1>
           </div>
-          <p className="flex-1 lg:max-w-md text-gray-600 text-base sm:text-lg leading-relaxed">
+          <p className="flex-1 lg:max-w-xl text-gray-600 text-base sm:text-lg leading-relaxed">
             Drive revenue growth with AI-driven insights, pipeline visibility,
             and seamless team collaboration. Empower your sales team to sell
             smarter.

@@ -7,19 +7,19 @@ import Navbar from "@/components/layout/Navbar";
 const satoshi = localFont({
   src: [
     {
-      path: "../public/fonts/Satoshi/Satoshi-Bold.otf",
+      path: "../public/fonts/satoshi/Satoshi-Bold.otf",
       weight: "700",
     },
     {
-      path: "../public/fonts/Satoshi/Satoshi-Regular.otf",
+      path: "../public/fonts/satoshi/Satoshi-Regular.otf",
       weight: "400",
     },
     {
-      path: "../public/fonts/Satoshi/Satoshi-Light.otf",
+      path: "../public/fonts/satoshi/Satoshi-Light.otf",
       weight: "300",
     },
     {
-      path: "../public/fonts/Satoshi/Satoshi-Medium.otf",
+      path: "../public/fonts/satoshi/Satoshi-Medium.otf",
       weight: "500",
     },
   ],

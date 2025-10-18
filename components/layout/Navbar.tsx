@@ -2,14 +2,36 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Phone, Search, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close mobile menu on route change
+  const handleLinkClick = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
   };
 
   return (
@@ -151,7 +173,7 @@ export default function Navbar() {
           {/* Sign Up */}
           <Link
             href="/signup"
-            className="hidden sm:block text-white bg-black py-2 px-4 rounded-full font-light hover:bg-gray-800 transition-colors"
+            className="hidden text-sm sm:text-base sm:block text-white bg-black py-2 px-4 rounded-full font-light hover:bg-gray-800 transition-colors"
           >
             Sign up for free
           </Link>
